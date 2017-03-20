@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 注册界面欢迎语 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/registTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/registTextView"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#97C023" />
+
+    </LinearLayout>
+
+    <!-- 注册表单 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp" >
+
+        <!-- 注册帐号 -->
+        <LinearLayout
+            android:id="@+id/registAccount"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/registAccountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="@string/registAccountTextView"
+                android:textSize="20sp"
+                android:textColor="#00A3D9" />
+
+            <EditText
+                android:id="@+id/registAccountEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:ems="20"
+                android:hint="@string/registAccountEditTextHint"
+                android:inputType="text"
+                android:textCursorDrawable="@drawable/hint_sharp_default" >
+
+                <requestFocus />
+            </EditText>
+
+        </LinearLayout>
+		
+        <!-- 注册密码 -->
+        <LinearLayout
+            android:id="@+id/registPasswd"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"            
+            android:gravity="center"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/registPasswdTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="@string/registPasswdTextView"
+                android:textSize="20sp"
+                android:textColor="#00A3D9" />
+
+            <EditText
+                android:id="@+id/registPasswdEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:ems="20"
+                android:hint="@string/registPasswdEditTextHint"
+                android:textCursorDrawable="@drawable/hint_sharp_default"
+                android:inputType="textPassword" />
+
+        </LinearLayout>
+
+        <!-- 注册提交按钮 -->
+
+        <LinearLayout
+            android:id="@+id/registSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/registSubmitButton"
+                android:layout_width="100dp"
+		        android:layout_height="50dp"
+		        android:layout_marginLeft="5dp"
+		        android:layout_marginRight="5dp"
+		        android:text="@string/registSubmitButton"
+		        android:textSize="20sp"
+		        android:background="@drawable/login_button_selector" />
+
+        </LinearLayout>
+
+    <!-- 底部滚动字样 （重写标签实现走马灯） -->
+    <LinearLayout
+        android:id="@+id/linearLayoutMarquess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_weight="2" >
+
+        <overRideTag.myMarqueeTextView
+            android:id="@+id/bottomMarqeeTextView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="@string/bottomMarqeeTextView"
+            android:textColor="#b8860b" />
+
+        <overRideTag.myMarqueeTextView
+            android:id="@+id/bottomMarqeeTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="@string/bottomMarqeeTextView"
+            android:textColor="#b8860b" />
+    </LinearLayout>
+ 
+    </LinearLayout>
+
+</LinearLayout>

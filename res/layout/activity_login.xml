@@ -1,0 +1,162 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.yld10.minchat.loginActivity" >
+
+    <!-- 顶部照片 -->
+
+    <ImageView
+        android:id="@+id/loginImageView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="22dp"
+        android:contentDescription="@string/ImageViewContentDescription"
+        android:src="@drawable/ic_launcher" />
+
+    <!-- Login帐号 -->
+
+    <ImageView
+        android:id="@+id/loginAccountImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="155dp"
+        android:layout_marginLeft="20dp"
+        android:contentDescription="@string/accountImageView"
+        android:textColor="#3399ff"
+        android:src="@drawable/person_72px_1185229_easyicon" />
+
+    <EditText
+        android:id="@+id/loginAccountEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/loginAccountImageView"
+        android:layout_alignBottom="@+id/loginAccountImageView"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/loginAccountImageView"
+        android:hint="@string/accountEditTextHint"
+        android:textCursorDrawable="@drawable/hint_sharp_default"
+        android:inputType="text" >
+
+        <requestFocus android:layout_width="wrap_content" />
+    </EditText>
+
+    <!-- Login密码 -->
+
+    <ImageView
+        android:id="@+id/loginPasswdImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/loginAccountImageView"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:contentDescription="@string/passwdImageView"
+        android:src="@drawable/login_72px_1121303_easyicon"
+        android:textColor="#3399ff" />
+
+    <EditText
+        android:id="@+id/loginPasswdEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/loginPasswdImageView"
+        android:layout_alignLeft="@+id/loginAccountEditText"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:ems="20"
+        android:hint="@string/passwdEditTextHint"
+        android:textCursorDrawable="@drawable/hint_sharp_default"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/alertTextView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/loginPasswdEditText"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#EE0000"
+        android:textSize="13sp" />
+    
+<LinearLayout
+    android:id="@+id/linearLayoutLoginButton"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_below="@+id/alertTextView"
+	android:orientation="horizontal"
+	android:gravity="center" >
+
+    <!-- 登录按钮 -->
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:text="@string/loginButton"
+        android:textSize="20sp"
+        android:background="@drawable/login_button_selector" />
+    
+    <!-- 注册按钮 -->
+
+    <Button
+        android:id="@+id/registButton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:text="@string/registButtom"
+        android:textSize="20sp"
+        android:textColor="#EE7942"
+        android:background="@drawable/regist_button_selector" />
+
+</LinearLayout>
+
+    <!-- 底部滚动字样 （重写标签实现走马灯） -->
+
+    <LinearLayout
+        android:id="@+id/linearLayoutMarquess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/linearLayoutLoginButton"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <overRideTag.myMarqueeTextView
+            android:id="@+id/bottomMarqeeTextView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="@string/bottomMarqeeTextView"
+            android:textColor="#b8860b" />
+
+        <overRideTag.myMarqueeTextView
+            android:id="@+id/bottomMarqeeTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="@string/bottomMarqeeTextView"
+            android:textColor="#b8860b" />
+    </LinearLayout>
+
+</RelativeLayout>
